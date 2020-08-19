@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         fontSize:10
     },message1: {
         fontSize : 10,
-        paddingVertical: 3,
+        paddingVertical: 10,
         paddingHorizontal : 4
     }
   });
