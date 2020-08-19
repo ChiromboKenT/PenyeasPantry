@@ -1,0 +1,224 @@
+@import "./mixins";
+@import "./variables.scss";
+.TopView{
+    position: relative;
+
+    padding: 1rem;
+    padding-top:calc(8vh + 2.8rem);
+    height: 60vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    background-image: url("../Images/penyesaBoard.png");
+        background-position: center;
+        background-size: cover;
+        @include respond(potrait){
+            flex-direction: column;
+            height: auto;
+           }
+        @include respond(smartPhone){
+            padding: .5rem;
+            padding-top:calc(8vh + 1rem);
+        }
+        @include respond(phone){
+            padding-top:calc(9vh + 1rem);
+        }
+    &-tabContainer{
+        flex : 1;
+        width: 100%;
+        padding-top: .75rem;
+       
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+       @include respond(laptop){
+           align-self: center;
+           padding-right: .5rem;
+       }
+       
+      
+      
+    }
+    &-logo{
+        width: 9rem;
+        &:hover{
+            cursor: pointer;
+            
+        }
+        @include respond(laptop){
+            width: 7rem;
+        }
+        @include respond(smartPhone){
+            position: absolute;
+        }
+    } 
+    &-Flogo{
+        width:11rem;
+        max-height:12rem;
+        position: absolute;
+        top : .5rem;
+        left: .75rem;
+        
+    }
+    &-tab{
+        padding : .7rem 0;
+        flex : 0 0 15rem;
+        font-size: 1.8em;
+        width: 10rem;
+        height: 100%;
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+
+        align-items: center;
+        border: .001px solid rgba($color-main, .4);
+        border-radius: 10px;
+        margin-right: 1rem;
+            box-shadow: 0 2px 8px 4px rgba($color-main, .3);
+        @include respond(laptop){
+            flex : 0 0 10rem;
+            font-size: 1.8em;
+            width: 100%;
+        }
+        @include respond(potrait){
+            flex-direction: row;
+        }
+        @include respond(potrait){
+            padding-top: 0;
+            width: 0px;
+            height: 0px;
+            position: fixed;
+            
+            opacity: 0;
+            visibility: hidden;
+            
+        }
+    }
+    &-tabKey{
+        padding : 0 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        height: 2.2rem;
+        font-size: 15px;
+        color: $color-main;
+        font-family: -apple-system,BlinkMacSystemFont,sans-serif;
+       width: 70%;
+       border-bottom: .04px solid rgba($color-main, .4);
+       margin-top: .3rem;
+       transition: all .4s;
+      
+       @include respond(laptop){
+        font-size: 14px;
+        padding : 0;
+       
+       }
+       &:hover{
+        cursor: pointer;
+        width: 100%;
+       }
+    }
+    &-main{
+        flex : 1;
+        border: .001px solid rgba($color-main, .2);
+        box-shadow: 0 2px 8px 4px rgba($color-main, .3);
+        border-radius: 10px;
+        display: flex;
+        @include respond (smartPhone){
+            flex-direction: column;
+            position: relative;
+        }
+    }
+}
+.main{
+    flex : 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
+    padding-left: 2rem;
+    @include respond(smartPhone){
+        padding: 8rem 1rem;
+        padding-bottom: 2rem;
+    }
+    &-heading{
+        text-shadow: #000 1px 1px 2px;
+        font-weight: 900;
+        color: $color-main;
+        letter-spacing: .2rem;
+        font-size: 2.5em;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+        @include respond(laptop){
+            font-size: 1.65em;
+            line-height: 1.3rem;
+            margin-bottom: .7rem;
+        }
+    }
+    &-text{
+        width: 90%;
+        font-size: 1.3em;
+        color: $color-main;
+        
+        margin-bottom: 1.7rem;
+        @include respond(laptop){
+            
+            line-height: 1.2rem;
+            margin-bottom: .3rem;
+        }
+    }
+    &-footer{
+        font-weight: 700;
+        color: $color-main;
+        font-size: 1.6em;
+        line-height: 1.5rem;
+        text-shadow: #000 1px 1px 2px;
+        @include respond(laptop){
+            font-size: 1.2em;
+            line-height: 1.2rem;
+           
+        }
+    }
+}
+.featuring{
+    height: 100%;
+    flex-basis: 19rem;
+    background-image: url("../Images/penyesaBasket.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include respond(laptop){
+        flex-basis: 14rem;
+    }
+    @include respond(potrait){
+        min-height: 8rem;
+    }
+    @include respond (smartPhone){
+        width:8rem;
+        max-height:8rem;
+        position: absolute;
+        top : 0;
+        right: .75rem;
+    }
+}
+.Info{
+    border: .001px solid rgba($color-main, .4);
+    border-radius: 10px;
+    flex : 1;
+    padding: 1.5rem 2rem;
+    color: $color-main;
+    background-color: $color-secondary--light;
+    &-title{
+        
+        font-weight: 700;
+        font-size: 1.8em;
+        margin-bottom: 0rem;
+    }
+    &-text{
+        font-size: 1.35em;
+    }
+}
+.active-Tab{
+    background-color: $color-secondary--light;
+}

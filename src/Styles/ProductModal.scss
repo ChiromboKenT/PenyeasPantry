@@ -1,0 +1,106 @@
+@import "./_mixins";
+@import "./variables";
+
+
+.Modal{
+    background-color: #fff;
+    min-width : 60%;
+    min-height : 70%;
+    max-height: 100%;
+    overflow: hidden;
+    
+   
+    @include respond(smartPhone){
+        width: 100%;
+        height: 100%;
+    }
+
+    &-title{
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+        font-size: 1.7em;
+        font-weight: 700;
+        color: $color-main;
+        text-shadow: 1px 2px 7px rgba(black,.65)
+
+    }
+    
+    &-price{
+        font-size: 2em;
+        font-weight: 700;
+        color : $color-main;
+        text-align: center;
+        @include respond(smartPhone){
+            margin-bottom: 1rem;
+        }
+    }
+}
+.Media{
+    width: 100%;
+    height: 8rem;
+    
+    margin: 0 2rem;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: left !important;
+    &-chip{
+        margin-left: 85%;
+        margin-top: .5rem;
+        box-shadow: 2px 2px 8px black;
+        @include respond(smartPhone){
+            margin-left: 75%;
+        }
+    }
+}
+.Control{
+    display: flex;
+    
+    &-button{
+        margin-left: auto !important;
+    }
+}
+.Body{
+    color : $color-main;
+    padding: 1rem;
+    width: 100%;
+    margin-top: auto;
+    
+    
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    @include respond(smartPhone){
+        -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    }
+    &-Product{
+        padding: 4rem 1rem;
+        padding-top: 2rem;
+        font-size: 1.5em;
+        font-weight: 700;
+        color: $color-main;
+    }
+    
+
+}
+
+.ModCon{
+    padding: 1rem;
+    padding-right: 3rem ;
+    display: flex;
+    justify-content: space-between;
+    @include respond(smartPhone){
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2rem;
+        padding: 0;
+    }
+    &-buttonControl{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+}

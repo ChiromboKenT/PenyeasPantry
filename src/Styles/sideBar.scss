@@ -1,0 +1,56 @@
+@import "./variables.scss";
+.cart-Item{
+    height: 100%;
+    width: 100%;
+    background-color: #ceccd1;
+    border: 5px solid $color-secondary;
+}
+
+.cart-text{
+
+}
+
+.cart-image{
+    width: 4rem;
+    height: 4rem;
+
+}
+
+.cart-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin : 0 ;
+    justify-items: center;
+    font-size: 1.3em;
+    line-height: 1.4rem;
+    text-align: left;
+    margin-left: 1rem;
+   &--heading{
+
+    
+        margin : 0;
+        text-transform: initial;
+
+    &-2{
+        margin : 0;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &-3{
+        margin : 0;
+    }
+   }
+}
+.cart-controls{
+    margin-left:  auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.cart-total{
+    margin-top: auto;
+    text-align: center;
+}

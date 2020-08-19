@@ -1,0 +1,55 @@
+@mixin breakPoints($device) {
+    @if $device == mobile{
+        @media screen and (max-width: 320px){
+            @content;
+        }
+    }
+    @else if $device == tablet{
+        @media screen and (max-width: 576px){
+            @content;
+        }
+    }
+    @else if $device == largeTab{
+        @media screen and (max-width: 768px){
+            @content;
+        }
+    }
+    @else if $device == laptop{
+        @media screen and (max-width: 768px){
+            @content;
+        }
+    }
+    @else if $device == desktop{
+        @media screen and (min-width: 768px){
+            @content;
+        }
+    }
+};
+@mixin respond($width){
+    @if $width == phone{
+        @media screen and (max-width : 375px) {
+            @content;
+        }
+    }
+    @else if $width == smartPhone{
+        @media screen and (max-width : 425px){
+            @content;
+        }
+    }
+    @else if $width == potrait{
+        @media screen and (max-width: 675px) {
+            @content;
+        }
+    }
+    @else if $width == tablet{
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $width == laptop{
+        @media screen and (max-width: 830px) {
+            @content;
+        }
+    }
+}
+
