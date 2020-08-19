@@ -30,7 +30,7 @@
   "scripts": {
     "svgr": "svgr -d src/Icons/ assets/",
     "start": "react-scripts start",
-    "build": "react-scripts build && mv build ../Penyesa-Pantry",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
