@@ -1,0 +1,17 @@
+{
+    "dev": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "Penyesa"
+    },
+    "test": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "Penyesa"
+    },
+    "production": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "Penyesa"
+    }
+}
