@@ -1,5 +1,8 @@
 import React from 'react'
 import "../Styles/Footer.scss"
+import PayfastLogo from '../Icons/payfastlogo.png'
+import PaypalLogo from  '../Icons/paypallogo.png'
+import EftLogo from  '../Icons/eftlogo.jpg'
 
 const Footer = () => {
     return (
@@ -18,18 +21,21 @@ const Footer = () => {
                             <a  className="Footer-links" href="http://www.pinterest.com/PenyesaSA"><i class="fab fa-pinterest-p"></i></a>
                         </div>
                     </div>
+                    <div className="Footer-main-logo">
+                        <img src={PaypalLogo} alt="paypallogo" width="70px" height="25px"/>
+                        <img src={PayfastLogo} alt="payfastlogo" width="70px" height="25px"/>
+                        <img src={EftLogo} alt="eftlogo"  width="70px" height="25px" />
+                     </div>
                     <div className="Footer-main-col">
-                    <h3 className="Footer-text">
-                           Email : info@penyesa.co.za
-                    </h3>
-                    <h3 className="Footer-text">
-                           Phone :  +27 65 808 7492
-                    </h3>
+                        <h3 className="Footer-text">
+                            Email : info@penyesa.co.za
+                        </h3>
+                        <h3 className="Footer-text">
+                            Phone :  +27 65 808 7492
+                        </h3>
                     </div>
                 </div>
-                <div className="Footer-main-logo">
-
-                </div>
+                
 
             </div>
             <div className="Footer-bottom">
